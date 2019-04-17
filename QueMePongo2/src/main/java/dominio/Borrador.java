@@ -30,14 +30,13 @@ public class Borrador {
 	public void definirMaterial(Material material) {
 		this.material = material;
 	}
-	
+
 	public Prenda crearPrenda() throws MaterialInconsistente {
-		if(tipo.permiteMaterial(material)) {
-			Prenda prendaLista = new Prenda(Objects.requireNonNull(tipo, "Se requiere un tipo"), 
-					Objects.requireNonNull(colorPrimario, "Se requiere un color primario"), 
-					Objects.requireNonNull(trama, "Se requiere una trama"), 
+		if (tipo.permiteMaterial(material)) {
+			Prenda prendaLista = new Prenda(Objects.requireNonNull(tipo, "Se requiere un tipo"),
+					Objects.requireNonNull(colorPrimario, "Se requiere un color primario"), colorSecundario,
+					Objects.requireNonNull(trama, "Se requiere una trama"),
 					Objects.requireNonNull(material, "Se requiere un material"));
-			prendaLista.setColorSecundario(colorSecundario);
 			return prendaLista;
 		}
 		throw new MaterialInconsistente("El material elegido no es compatible con el tipo de prenda");
