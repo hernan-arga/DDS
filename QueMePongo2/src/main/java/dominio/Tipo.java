@@ -14,7 +14,9 @@ public class Tipo {
 	public static final Tipo POLLERA = new Tipo(Categoria.PARTE_INFERIOR,
 			Arrays.asList(Material.ALGODON, Material.LANA));
 	public static final Tipo ANILLO = new Tipo(Categoria.ACCESORIOS, Arrays.asList(Material.ORO, Material.DIAMANTE));
-
+	public static final Tipo CHOMBA = new Tipo(Categoria.PARTE_SUPERIOR,
+			Arrays.asList(Material.ALGODON, Material.LANA));
+	
 	List<Material> materialesValidados;
 	Categoria categoria;
 
